@@ -1,0 +1,40 @@
+
+	public static void main(String[] args) {
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Mjena\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		WebDriver driver =new ChromeDriver();
+		driver.navigate().to("https://www.shutterfly.com");
+		driver.findElement(By.cssSelector(".modal-close")).click();
+		Actions act = new Actions(driver);
+	
+	//	WebElement prints= driver.findElement(By.cssSelector("#catItemLink_2"));
+	//	WebElement calender= driver.findElement(By.cssSelector("#catItemLink_3"));
+	//	WebElement gift= driver.findElement(By.cssSelector("#catItemLink_4"));
+	//	WebElement home= driver.findElement(By.cssSelector("#catItemLink_5"));
+	//	WebElement kids= driver.findElement(By.cssSelector("#catItemLink_6"));
+	//	WebElement pets= driver.findElement(By.cssSelector("#catItemLink_7"));
+	//	WebElement wedding= driver.findElement(By.cssSelector("#catItemLink_8"));
+		WebElement ideas= driver.findElement(By.cssSelector("#catItemLink_10"));
+		
+		
+	//	WebElement cname= driver.findElement(By.name("&lid=Sub_CS_Holiday Invitations"));
+	//	WebElement pname= driver.findElement(By.name("&lid=Sub_PB_Kids_Photo_Books_0907"));
+	//	WebElement prname= driver.findElement(By.name("&lid=Sub_PR_Framed Prints"));
+	//	WebElement calname= driver.findElement(By.name("&lid=Sub_CAL_CalendarPoster"));
+	//	WebElement giftname= driver.findElement(By.name("&lid=Sub_PZG_Mugs_Photo Gifts"));
+	//	WebElement homename= driver.findElement(By.name("&lid=Sub_HD_Mugs"));
+	//	WebElement kidsname= driver.findElement(By.name("&lid=Sub_Kids_Puzzles"));
+	//	WebElement petsname= driver.findElement(By.name("&lid=Sub_Pets_Pet_Beds"));
+	//	WebElement weddingname= driver.findElement(By.name("&lid=Sub_WD_Wedding_Invitations_Classic"));
+		WebElement ideasname= driver.findElement(By.name("&lid=Sub_IDEAS_Photo Wall Ideas"));
+		
+
+				
+		act.moveToElement(ideas).perform();
+		act.moveToElement(ideasname).click().perform();
+		
+
+ 
+	}
+
+}
